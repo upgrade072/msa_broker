@@ -1,0 +1,570 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ns/call  ns/call  name    
+  6.90      0.10     0.10                             zmq::msg_t::close()
+  4.83      0.17     0.07                             zmq::ctx_t::send_command(unsigned int, zmq::command_t const&)
+  4.48      0.24     0.07                             zmq::ypipe_t<zmq::command_t, 16>::check_read()
+  4.14      0.30     0.06                             zmq::shared_message_memory_allocator::call_dec_ref(void*, void*)
+  3.45      0.35     0.05                             zmq::msg_t::size() const
+  3.45      0.40     0.05                             zmq_recv
+  2.76      0.44     0.04   759781    52.65    52.65  get_msg_ctx
+  2.76      0.48     0.04                             zmq::ypipe_t<zmq::msg_t, 256>::check_read()
+  2.76      0.52     0.04                             zmq::ypipe_t<zmq::msg_t, 256>::write(zmq::msg_t const&, bool)
+  2.76      0.56     0.04                             epoll_dispatch
+  2.41      0.59     0.04                             event_process_active_single_queue
+  2.07      0.62     0.03                             zmq::socket_base_t::send(zmq::msg_t*, int)
+  2.07      0.65     0.03                             zmq::fq_t::recvpipe(zmq::msg_t*, zmq::pipe_t**)
+  2.07      0.68     0.03                             zmq::pipe_t::write(zmq::msg_t const*)
+  2.07      0.71     0.03                             event_active_nolock_
+  2.07      0.74     0.03                             event_base_loop
+  2.07      0.77     0.03                             event_queue_insert_active
+  2.07      0.80     0.03                             evthread_notify_base
+  2.07      0.83     0.03                             zmq::pipe_t::check_write()
+  1.72      0.86     0.03                             zmq::pipe_t::process_activate_read()
+  1.38      0.88     0.02                             zmq::fq_t::activated(zmq::pipe_t*)
+  1.38      0.90     0.02                             zmq::pipe_t::check_read()
+  1.38      0.92     0.02                             zmq::pipe_t::read(zmq::msg_t*)
+  1.38      0.94     0.02                             zmq::object_t::send_activate_read(zmq::pipe_t*)
+  1.38      0.96     0.02                             zmq::mailbox_t::recv(zmq::command_t*, int)
+  1.38      0.98     0.02                             zmq::mailbox_t::send(zmq::command_t const&)
+  1.38      1.00     0.02                             event_assign
+  1.38      1.02     0.02                             event_del_nolock_
+  1.38      1.04     0.02                             evmap_io_active_
+  1.38      1.06     0.02                             evthread_posix_lock
+  1.38      1.08     0.02                             evthread_posix_unlock
+  1.38      1.10     0.02                             evutil_configure_monotonic_time_
+  1.38      1.12     0.02                             gettime
+  1.38      1.14     0.02                             zmq_atomic_counter_inc
+  1.03      1.15     0.02                             event_to_event_callback
+  0.69      1.16     0.01   479176    20.87    20.87  evsock_push_relay
+  0.69      1.17     0.01                             as_socket_base_t(void*)
+  0.69      1.18     0.01                             s_recvmsg(zmq::socket_base_t*, zmq_msg_t*, int)
+  0.69      1.19     0.01                             zmq::metadata_t::drop_ref()
+  0.69      1.20     0.01                             zmq::signaler_t::send()
+  0.69      1.21     0.01                             zmq::socket_base_t::read_activated(zmq::pipe_t*)
+  0.69      1.22     0.01                             zmq::socket_base_t::recv(zmq::msg_t*, int)
+  0.69      1.23     0.01                             zmq::fq_t::recv(zmq::msg_t*)
+  0.69      1.24     0.01                             zmq::msg_t::reset_metadata()
+  0.69      1.25     0.01                             zmq::msg_t::init()
+  0.69      1.26     0.01                             zmq::pull_t::xpipe_terminated(zmq::pipe_t*)
+  0.69      1.27     0.01                             zmq::pull_t::xrecv(zmq::msg_t*)
+  0.69      1.28     0.01                             zmq::clock_t::rdtsc()
+  0.69      1.29     0.01                             zmq::clock_t::now_ms()
+  0.69      1.30     0.01                             zmq::object_t::process_command(zmq::command_t const&)
+  0.69      1.31     0.01                             zmq::socket_base_t::check_tag() const
+  0.69      1.32     0.01                             epoll_apply_changes
+  0.69      1.33     0.01                             epoll_nochangelist_add
+  0.69      1.34     0.01                             event_base_once
+  0.69      1.35     0.01                             event_callback_activate_nolock_
+  0.69      1.36     0.01                             event_queue_remove_active
+  0.69      1.37     0.01                             evutil_gettime_monotonic_
+  0.69      1.38     0.01                             get_element
+  0.69      1.39     0.01                             update_time_cache
+  0.34      1.40     0.01                             zmq::socket_base_t::check_destroy()
+  0.34      1.40     0.01                             zmq::socket_base_t::extract_flags(zmq::msg_t const*)
+  0.34      1.41     0.01                             zmq::msg_t::init_leave()
+  0.34      1.41     0.01                             zmq::msg_t::data()
+  0.34      1.42     0.01                             zmq::pipe_t::is_delimiter(zmq::msg_t const&)
+  0.34      1.42     0.01                             zmq::pipe_t::process_pipe_peer_stats(unsigned long, zmq::own_t*, zmq::endpoint_uri_pair_t*)
+  0.34      1.43     0.01                             zmq::ypipe_t<zmq::command_t, 16>::unwrite(zmq::command_t*)
+  0.34      1.43     0.01                             non-virtual thunk to zmq::peer_t::~peer_t()
+  0.34      1.44     0.01                             event_callback_to_event
+  0.34      1.44     0.01                             event_process_active
+  0.34      1.45     0.01                             event_queue_insert_timeout
+  0.34      1.45     0.01                             event_queue_make_later_events_active
+  0.00      1.45     0.00   760847     0.00     0.00  free_msg_ctx
+  0.00      1.45     0.00   759689     0.00     0.00  zsock_drain_remain_part
+  0.00      1.45     0.00   480016     0.00     0.00  msg_relay
+  0.00      1.45     0.00   473532     0.00     0.00  service_relay
+  0.00      1.45     0.00   280957     0.00   142.37  evsock_pull_read
+  0.00      1.45     0.00     6179     0.00     0.00  err_msg_reply
+  0.00      1.45     0.00     6179     0.00     0.00  evsock_router_err_reply
+  0.00      1.45     0.00     6179     0.00     0.00  router_relay
+  0.00      1.45     0.00      392     0.00     0.00  check_svc_alive
+  0.00      1.45     0.00      290     0.00     0.00  handle_regi
+  0.00      1.45     0.00      144     0.00     0.00  evsock_sub_read
+  0.00      1.45     0.00      101     0.00     0.00  manage_appls
+  0.00      1.45     0.00      100     0.00     0.00  main_tick
+  0.00      1.45     0.00      100     0.00     0.00  tick_stat
+  0.00      1.45     0.00        9     0.00     0.00  find_svc_exist
+  0.00      1.45     0.00        5     0.00     0.00  add_zsock_to_list
+  0.00      1.45     0.00        3     0.00     0.00  initialize_thread
+  0.00      1.45     0.00        2     0.00     0.00  add_zsock_rd_event
+  0.00      1.45     0.00        1     0.00     0.00  add_event_to_list
+  0.00      1.45     0.00        1     0.00     0.00  evsock_push_create
+  0.00      1.45     0.00        1     0.00     0.00  initialize_main
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2016 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.69% of 1.45 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]      6.9    0.10    0.00                 zmq::msg_t::close() [1]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]      4.8    0.07    0.00                 zmq::ctx_t::send_command(unsigned int, zmq::command_t const&) [2]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]      4.5    0.07    0.00                 zmq::ypipe_t<zmq::command_t, 16>::check_read() [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]      4.1    0.06    0.00                 zmq::shared_message_memory_allocator::call_dec_ref(void*, void*) [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]      3.4    0.05    0.00                 zmq_recv [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      3.4    0.05    0.00                 zmq::msg_t::size() const [6]
+-----------------------------------------------
+                0.04    0.00  759781/759781      evsock_pull_read [8]
+[7]      2.8    0.04    0.00  759781         get_msg_ctx [7]
+-----------------------------------------------
+                0.00    0.04  280957/280957      event_persist_closure [10]
+[8]      2.8    0.00    0.04  280957         evsock_pull_read [8]
+                0.04    0.00  759781/759781      get_msg_ctx [7]
+                0.00    0.00  759259/759689      zsock_drain_remain_part [76]
+                0.00    0.00  281359/760847      free_msg_ctx [75]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      2.8    0.04    0.00                 epoll_dispatch [9]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     2.8    0.00    0.04                 event_persist_closure [10]
+                0.00    0.04  280957/280957      evsock_pull_read [8]
+                0.00    0.00     144/144         evsock_sub_read [84]
+                0.00    0.00     101/101         manage_appls [85]
+                0.00    0.00     100/100         main_tick [86]
+-----------------------------------------------
+                                                 <spontaneous>
+[11]     2.8    0.04    0.00                 zmq::ypipe_t<zmq::msg_t, 256>::check_read() [11]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     2.8    0.04    0.00                 zmq::ypipe_t<zmq::msg_t, 256>::write(zmq::msg_t const&, bool) [12]
+-----------------------------------------------
+                                                 <spontaneous>
+[13]     2.4    0.04    0.00                 event_process_active_single_queue [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[14]     2.1    0.03    0.00                 event_active_nolock_ [14]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     2.1    0.03    0.00                 event_base_loop [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     2.1    0.03    0.00                 event_queue_insert_active [16]
+-----------------------------------------------
+                                                 <spontaneous>
+[17]     2.1    0.03    0.00                 evthread_notify_base [17]
+-----------------------------------------------
+                                                 <spontaneous>
+[18]     2.1    0.03    0.00                 zmq::socket_base_t::send(zmq::msg_t*, int) [18]
+-----------------------------------------------
+                                                 <spontaneous>
+[19]     2.1    0.03    0.00                 zmq::fq_t::recvpipe(zmq::msg_t*, zmq::pipe_t**) [19]
+-----------------------------------------------
+                                                 <spontaneous>
+[20]     2.1    0.03    0.00                 zmq::pipe_t::write(zmq::msg_t const*) [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     2.1    0.03    0.00                 zmq::pipe_t::check_write() [21]
+-----------------------------------------------
+                                                 <spontaneous>
+[22]     1.7    0.03    0.00                 zmq::pipe_t::process_activate_read() [22]
+-----------------------------------------------
+                                                 <spontaneous>
+[23]     1.4    0.02    0.00                 event_assign [23]
+-----------------------------------------------
+                                                 <spontaneous>
+[24]     1.4    0.02    0.00                 event_del_nolock_ [24]
+-----------------------------------------------
+                                                 <spontaneous>
+[25]     1.4    0.02    0.00                 evmap_io_active_ [25]
+-----------------------------------------------
+                                                 <spontaneous>
+[26]     1.4    0.02    0.00                 evthread_posix_lock [26]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     1.4    0.02    0.00                 evthread_posix_unlock [27]
+-----------------------------------------------
+                                                 <spontaneous>
+[28]     1.4    0.02    0.00                 evutil_configure_monotonic_time_ [28]
+-----------------------------------------------
+                                                 <spontaneous>
+[29]     1.4    0.02    0.00                 gettime [29]
+-----------------------------------------------
+                                                 <spontaneous>
+[30]     1.4    0.02    0.00                 zmq_atomic_counter_inc [30]
+-----------------------------------------------
+                                                 <spontaneous>
+[31]     1.4    0.02    0.00                 zmq::fq_t::activated(zmq::pipe_t*) [31]
+-----------------------------------------------
+                                                 <spontaneous>
+[32]     1.4    0.02    0.00                 zmq::pipe_t::check_read() [32]
+-----------------------------------------------
+                                                 <spontaneous>
+[33]     1.4    0.02    0.00                 zmq::pipe_t::read(zmq::msg_t*) [33]
+-----------------------------------------------
+                                                 <spontaneous>
+[34]     1.4    0.02    0.00                 zmq::object_t::send_activate_read(zmq::pipe_t*) [34]
+-----------------------------------------------
+                                                 <spontaneous>
+[35]     1.4    0.02    0.00                 zmq::mailbox_t::recv(zmq::command_t*, int) [35]
+-----------------------------------------------
+                                                 <spontaneous>
+[36]     1.4    0.02    0.00                 zmq::mailbox_t::send(zmq::command_t const&) [36]
+-----------------------------------------------
+                                                 <spontaneous>
+[37]     1.0    0.02    0.00                 event_to_event_callback [37]
+-----------------------------------------------
+                0.01    0.00  479176/479176      event_once_cb [43]
+[38]     0.7    0.01    0.00  479176         evsock_push_relay [38]
+                0.00    0.00  473532/473532      service_relay [78]
+                0.00    0.00  473309/760847      free_msg_ctx [75]
+                0.00    0.00    6179/6179        err_msg_reply [79]
+-----------------------------------------------
+                                                 <spontaneous>
+[39]     0.7    0.01    0.00                 epoll_apply_changes [39]
+-----------------------------------------------
+                                                 <spontaneous>
+[40]     0.7    0.01    0.00                 epoll_nochangelist_add [40]
+-----------------------------------------------
+                                                 <spontaneous>
+[41]     0.7    0.01    0.00                 event_base_once [41]
+-----------------------------------------------
+                                                 <spontaneous>
+[42]     0.7    0.01    0.00                 event_callback_activate_nolock_ [42]
+-----------------------------------------------
+                                                 <spontaneous>
+[43]     0.7    0.00    0.01                 event_once_cb [43]
+                0.01    0.00  479176/479176      evsock_push_relay [38]
+                0.00    0.00    6179/6179        evsock_router_err_reply [80]
+                0.00    0.00       1/1           evsock_push_create [93]
+-----------------------------------------------
+                                                 <spontaneous>
+[44]     0.7    0.01    0.00                 event_queue_remove_active [44]
+-----------------------------------------------
+                                                 <spontaneous>
+[45]     0.7    0.01    0.00                 evutil_gettime_monotonic_ [45]
+-----------------------------------------------
+                                                 <spontaneous>
+[46]     0.7    0.01    0.00                 get_element [46]
+-----------------------------------------------
+                                                 <spontaneous>
+[47]     0.7    0.01    0.00                 update_time_cache [47]
+-----------------------------------------------
+                                                 <spontaneous>
+[48]     0.7    0.01    0.00                 as_socket_base_t(void*) [48]
+-----------------------------------------------
+                                                 <spontaneous>
+[49]     0.7    0.01    0.00                 s_recvmsg(zmq::socket_base_t*, zmq_msg_t*, int) [49]
+-----------------------------------------------
+                                                 <spontaneous>
+[50]     0.7    0.01    0.00                 zmq::metadata_t::drop_ref() [50]
+-----------------------------------------------
+                                                 <spontaneous>
+[51]     0.7    0.01    0.00                 zmq::signaler_t::send() [51]
+-----------------------------------------------
+                                                 <spontaneous>
+[52]     0.7    0.01    0.00                 zmq::socket_base_t::read_activated(zmq::pipe_t*) [52]
+-----------------------------------------------
+                                                 <spontaneous>
+[53]     0.7    0.01    0.00                 zmq::socket_base_t::recv(zmq::msg_t*, int) [53]
+-----------------------------------------------
+                                                 <spontaneous>
+[54]     0.7    0.01    0.00                 zmq::fq_t::recv(zmq::msg_t*) [54]
+-----------------------------------------------
+                                                 <spontaneous>
+[55]     0.7    0.01    0.00                 zmq::msg_t::reset_metadata() [55]
+-----------------------------------------------
+                                                 <spontaneous>
+[56]     0.7    0.01    0.00                 zmq::msg_t::init() [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[57]     0.7    0.01    0.00                 zmq::pull_t::xpipe_terminated(zmq::pipe_t*) [57]
+-----------------------------------------------
+                                                 <spontaneous>
+[58]     0.7    0.01    0.00                 zmq::pull_t::xrecv(zmq::msg_t*) [58]
+-----------------------------------------------
+                                                 <spontaneous>
+[59]     0.7    0.01    0.00                 zmq::clock_t::rdtsc() [59]
+-----------------------------------------------
+                                                 <spontaneous>
+[60]     0.7    0.01    0.00                 zmq::clock_t::now_ms() [60]
+-----------------------------------------------
+                                                 <spontaneous>
+[61]     0.7    0.01    0.00                 zmq::object_t::process_command(zmq::command_t const&) [61]
+-----------------------------------------------
+                                                 <spontaneous>
+[62]     0.7    0.01    0.00                 zmq::socket_base_t::check_tag() const [62]
+-----------------------------------------------
+                                                 <spontaneous>
+[63]     0.3    0.01    0.00                 event_callback_to_event [63]
+-----------------------------------------------
+                                                 <spontaneous>
+[64]     0.3    0.01    0.00                 event_process_active [64]
+-----------------------------------------------
+                                                 <spontaneous>
+[65]     0.3    0.01    0.00                 event_queue_insert_timeout [65]
+-----------------------------------------------
+                                                 <spontaneous>
+[66]     0.3    0.01    0.00                 event_queue_make_later_events_active [66]
+-----------------------------------------------
+                                                 <spontaneous>
+[67]     0.3    0.01    0.00                 zmq::socket_base_t::check_destroy() [67]
+-----------------------------------------------
+                                                 <spontaneous>
+[68]     0.3    0.01    0.00                 zmq::socket_base_t::extract_flags(zmq::msg_t const*) [68]
+-----------------------------------------------
+                                                 <spontaneous>
+[69]     0.3    0.01    0.00                 zmq::msg_t::init_leave() [69]
+-----------------------------------------------
+                                                 <spontaneous>
+[70]     0.3    0.01    0.00                 zmq::msg_t::data() [70]
+-----------------------------------------------
+                                                 <spontaneous>
+[71]     0.3    0.01    0.00                 zmq::pipe_t::is_delimiter(zmq::msg_t const&) [71]
+-----------------------------------------------
+                                                 <spontaneous>
+[72]     0.3    0.01    0.00                 zmq::pipe_t::process_pipe_peer_stats(unsigned long, zmq::own_t*, zmq::endpoint_uri_pair_t*) [72]
+-----------------------------------------------
+                                                 <spontaneous>
+[73]     0.3    0.01    0.00                 zmq::ypipe_t<zmq::command_t, 16>::unwrite(zmq::command_t*) [73]
+-----------------------------------------------
+                                                 <spontaneous>
+[74]     0.3    0.01    0.00                 non-virtual thunk to zmq::peer_t::~peer_t() [74]
+-----------------------------------------------
+                0.00    0.00    6179/760847      evsock_router_err_reply [80]
+                0.00    0.00  281359/760847      evsock_pull_read [8]
+                0.00    0.00  473309/760847      evsock_push_relay [38]
+[75]     0.0    0.00    0.00  760847         free_msg_ctx [75]
+-----------------------------------------------
+                0.00    0.00     430/759689      evsock_sub_read [84]
+                0.00    0.00  759259/759689      evsock_pull_read [8]
+[76]     0.0    0.00    0.00  759689         zsock_drain_remain_part [76]
+-----------------------------------------------
+                0.00    0.00    6179/480016      router_relay [81]
+                0.00    0.00  473837/480016      service_relay [78]
+[77]     0.0    0.00    0.00  480016         msg_relay [77]
+-----------------------------------------------
+                0.00    0.00  473532/473532      evsock_push_relay [38]
+[78]     0.0    0.00    0.00  473532         service_relay [78]
+                0.00    0.00  473837/480016      msg_relay [77]
+-----------------------------------------------
+                0.00    0.00    6179/6179        evsock_push_relay [38]
+[79]     0.0    0.00    0.00    6179         err_msg_reply [79]
+-----------------------------------------------
+                0.00    0.00    6179/6179        event_once_cb [43]
+[80]     0.0    0.00    0.00    6179         evsock_router_err_reply [80]
+                0.00    0.00    6179/6179        router_relay [81]
+                0.00    0.00    6179/760847      free_msg_ctx [75]
+-----------------------------------------------
+                0.00    0.00    6179/6179        evsock_router_err_reply [80]
+[81]     0.0    0.00    0.00    6179         router_relay [81]
+                0.00    0.00    6179/480016      msg_relay [77]
+-----------------------------------------------
+                0.00    0.00     392/392         list_element [481]
+[82]     0.0    0.00    0.00     392         check_svc_alive [82]
+-----------------------------------------------
+                0.00    0.00     290/290         evsock_sub_read [84]
+[83]     0.0    0.00    0.00     290         handle_regi [83]
+-----------------------------------------------
+                0.00    0.00     144/144         event_persist_closure [10]
+[84]     0.0    0.00    0.00     144         evsock_sub_read [84]
+                0.00    0.00     430/759689      zsock_drain_remain_part [76]
+                0.00    0.00     290/290         handle_regi [83]
+-----------------------------------------------
+                0.00    0.00     101/101         event_persist_closure [10]
+[85]     0.0    0.00    0.00     101         manage_appls [85]
+-----------------------------------------------
+                0.00    0.00     100/100         event_persist_closure [10]
+[86]     0.0    0.00    0.00     100         main_tick [86]
+                0.00    0.00     100/100         tick_stat [87]
+-----------------------------------------------
+                0.00    0.00     100/100         main_tick [86]
+[87]     0.0    0.00    0.00     100         tick_stat [87]
+-----------------------------------------------
+                0.00    0.00       9/9           list_element [481]
+[88]     0.0    0.00    0.00       9         find_svc_exist [88]
+-----------------------------------------------
+                0.00    0.00       1/5           evsock_push_create [93]
+                0.00    0.00       4/5           initialize_thread [90]
+[89]     0.0    0.00    0.00       5         add_zsock_to_list [89]
+-----------------------------------------------
+                0.00    0.00       3/3           io_thread [477]
+[90]     0.0    0.00    0.00       3         initialize_thread [90]
+                0.00    0.00       4/5           add_zsock_to_list [89]
+                0.00    0.00       2/2           add_zsock_rd_event [91]
+                0.00    0.00       1/1           add_event_to_list [92]
+-----------------------------------------------
+                0.00    0.00       2/2           initialize_thread [90]
+[91]     0.0    0.00    0.00       2         add_zsock_rd_event [91]
+-----------------------------------------------
+                0.00    0.00       1/1           initialize_thread [90]
+[92]     0.0    0.00    0.00       1         add_event_to_list [92]
+-----------------------------------------------
+                0.00    0.00       1/1           event_once_cb [43]
+[93]     0.0    0.00    0.00       1         evsock_push_create [93]
+                0.00    0.00       1/5           add_zsock_to_list [89]
+-----------------------------------------------
+                0.00    0.00       1/1           main [482]
+[94]     0.0    0.00    0.00       1         initialize_main [94]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2016 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [48] as_socket_base_t(void*) (zmq.cpp) [12] zmq::ypipe_t<zmq::msg_t, 256>::write(zmq::msg_t const&, bool) [37] event_to_event_callback
+  [49] s_recvmsg(zmq::socket_base_t*, zmq_msg_t*, int) (zmq.cpp) [3] zmq::ypipe_t<zmq::command_t, 16>::check_read() [25] evmap_io_active_
+  [50] zmq::metadata_t::drop_ref() [73] zmq::ypipe_t<zmq::command_t, 16>::unwrite(zmq::command_t*) [8] evsock_pull_read
+  [51] zmq::signaler_t::send() [61] zmq::object_t::process_command(zmq::command_t const&) [93] evsock_push_create
+  [67] zmq::socket_base_t::check_destroy() [34] zmq::object_t::send_activate_read(zmq::pipe_t*) [38] evsock_push_relay
+  [68] zmq::socket_base_t::extract_flags(zmq::msg_t const*) [35] zmq::mailbox_t::recv(zmq::command_t*, int) [80] evsock_router_err_reply
+  [52] zmq::socket_base_t::read_activated(zmq::pipe_t*) [36] zmq::mailbox_t::send(zmq::command_t const&) [84] evsock_sub_read
+  [53] zmq::socket_base_t::recv(zmq::msg_t*, int) [62] zmq::socket_base_t::check_tag() const [17] evthread_notify_base
+  [18] zmq::socket_base_t::send(zmq::msg_t*, int) [6] zmq::msg_t::size() const [26] evthread_posix_lock
+   [4] zmq::shared_message_memory_allocator::call_dec_ref(void*, void*) [74] non-virtual thunk to zmq::peer_t::~peer_t() [27] evthread_posix_unlock
+  [54] zmq::fq_t::recv(zmq::msg_t*) [92] add_event_to_list [28] evutil_configure_monotonic_time_
+  [19] zmq::fq_t::recvpipe(zmq::msg_t*, zmq::pipe_t**) [91] add_zsock_rd_event [45] evutil_gettime_monotonic_
+  [31] zmq::fq_t::activated(zmq::pipe_t*) [89] add_zsock_to_list [88] find_svc_exist
+   [2] zmq::ctx_t::send_command(unsigned int, zmq::command_t const&) [82] check_svc_alive [75] free_msg_ctx
+  [69] zmq::msg_t::init_leave() [39] epoll_apply_changes  [46] get_element
+  [55] zmq::msg_t::reset_metadata() [9] epoll_dispatch     [7] get_msg_ctx
+  [70] zmq::msg_t::data()     [40] epoll_nochangelist_add [29] gettime
+  [56] zmq::msg_t::init()     [79] err_msg_reply          [83] handle_regi
+   [1] zmq::msg_t::close()    [14] event_active_nolock_   [94] initialize_main
+  [32] zmq::pipe_t::check_read() [23] event_assign        [90] initialize_thread
+  [21] zmq::pipe_t::check_write() [15] event_base_loop    [86] main_tick
+  [71] zmq::pipe_t::is_delimiter(zmq::msg_t const&) [41] event_base_once [85] manage_appls
+  [22] zmq::pipe_t::process_activate_read() [42] event_callback_activate_nolock_ [77] msg_relay
+  [72] zmq::pipe_t::process_pipe_peer_stats(unsigned long, zmq::own_t*, zmq::endpoint_uri_pair_t*) [63] event_callback_to_event [81] router_relay
+  [33] zmq::pipe_t::read(zmq::msg_t*) [24] event_del_nolock_ [78] service_relay
+  [20] zmq::pipe_t::write(zmq::msg_t const*) [64] event_process_active [87] tick_stat
+  [57] zmq::pull_t::xpipe_terminated(zmq::pipe_t*) [13] event_process_active_single_queue [47] update_time_cache
+  [58] zmq::pull_t::xrecv(zmq::msg_t*) [16] event_queue_insert_active [30] zmq_atomic_counter_inc
+  [59] zmq::clock_t::rdtsc()  [65] event_queue_insert_timeout [5] zmq_recv
+  [60] zmq::clock_t::now_ms() [66] event_queue_make_later_events_active [76] zsock_drain_remain_part
+  [11] zmq::ypipe_t<zmq::msg_t, 256>::check_read() [44] event_queue_remove_active
